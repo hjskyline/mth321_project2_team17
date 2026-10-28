@@ -6,8 +6,9 @@ MTH321 Project 2: Elliptic BVPs — Team 17
 Mixed Dirichlet/Neumann/Robin boundary data for the two-dimensional Poisson problem.
 Compare the prescribed one-sided and ghost-point finite-difference boundary closures.
 
-This repository currently contains the project structure only. Solver implementation,
-experiments, dependencies, report, and presentation will be added as the project develops.
+The first numerical baseline is implemented: the prescribed exponential MMS,
+Neumann/Robin variants, both boundary closures, sparse solves, and verification.
+Report, presentation, and application/depth extensions remain future work.
 
 ## Repository structure
 
@@ -65,3 +66,68 @@ If Git reports conflicts, resolve them and commit before continuing.
 Switching branches changes the files in the same local directory; it does not
 require a second copy of the project. Each teammate uses their own Python
 environment and their own GitHub authentication.
+
+## Baseline setup and reproduction
+
+Use Python 3.11 or newer. Create a per-user environment (do not commit it):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m unittest discover -s code -p 'test_*.py' -v
+python code/run_all.py
+```
+
+On Windows activate with `.venv\Scripts\activate` instead. An existing environment
+with NumPy, SciPy, and Matplotlib may also be used; select that interpreter in the editor.
+
+The baseline uses N=8,16,32,64 intervals per coordinate (four meshes). It checks all
+four combinations: Neumann/Robin x one-sided/ghost. For a larger study:
+
+```bash
+python code/run_all.py --meshes 16 32 64 128
+```
+
+Run only the small-grid assembly checks:
+
+```bash
+python code/mixed_boundary_fd.py --verify-only
+```
+
+Entry points resolve outputs relative to the repository, independent of the current
+directory. All figures are written to files, so no graphical desktop is required.
+Existing files with the same output names are overwritten when reproducing.
+
+### Files to read first
+
+- `docs/model.md`: equations, boundary derivation, unknown numbering, error norms,
+  solver choice, pre-run predictions and limits of the claims.
+- `code/mixed_boundary_fd.py`: source functions, sparse assembly, solve/measure,
+  residual checks, independent solve and refinement study.
+- `code/run_all.py`: one-command baseline reproduction and solution/error plots.
+- `code/test_mixed_boundary.py`: hand rows, exact polynomials, independent linear
+  algebra, row scaling and norm weights.
+- `docs/scaffolding_reference.md` and `docs/scaffolding_inventory.json`: existing
+  learning-file references and their source hashes; no runtime dependency on them.
+- `docs/ai_audit.md`: AI assistance, numerical checks and remaining human audit.
+
+### Generated evidence
+
+- `results/mms_convergence.csv`: errors, observed orders, scaled/backward residuals,
+  unknown counts, nonzeros and matrix asymmetry for every mesh and formulation.
+- `results/mms_summary.txt`: last-three-level diagnostic fits, fit deviations and
+  independent BiCGSTAB/LU comparisons on each finest system.
+- `results/verification.txt`: small-grid assembly check results.
+- `results/unit_tests.txt`: saved test log from the initial baseline validation;
+  regenerate with the unittest command above (redirect output to save a new log).
+- `results/baseline_solutions.npz`: full nodal solutions on the finest mesh;
+  arrays are indexed `[i,j]` with x varying along axis 0.
+- `results/environment.json`: Python/package versions and mesh parameters.
+- `figures/mms_convergence.png`, `matrix_sparsity.png`, `solution_comparison.png`,
+  `error_comparison.png`: measured convergence and field diagnostics.
+
+Predicted orders are reference expectations, not forced slopes. A small residual or
+agreement of two solvers does not prove correct discretisation. This baseline is an
+MMS verification problem, not yet a calibrated heat-transfer application or a solver
+performance comparison. The course's human AI-code audit remains to be completed.

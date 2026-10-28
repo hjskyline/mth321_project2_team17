@@ -1,0 +1,4 @@
+PASS neumann/first_order: affine solution N=2,4,8; hand boundary row; corner ownership; sparse indexing/signs
+PASS neumann/ghost: affine solution N=2,4,8; hand boundary row; corner ownership; sparse indexing/signs
+PASS robin/first_order: affine solution N=2,4,8; hand boundary row; corner ownership; sparse indexing/signs
+PASS robin/ghost: affine solution N=2,4,8; hand boundary row; corner ownership; sparse indexing/signs

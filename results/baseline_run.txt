@@ -1,0 +1,50 @@
+Recorded predictions and equations: docs/model.md
+PASS neumann/first_order: affine solution N=2,4,8; hand boundary row; corner ownership; sparse indexing/signs
+PASS neumann/ghost: affine solution N=2,4,8; hand boundary row; corner ownership; sparse indexing/signs
+PASS robin/first_order: affine solution N=2,4,8; hand boundary row; corner ownership; sparse indexing/signs
+PASS robin/ghost: affine solution N=2,4,8; hand boundary row; corner ownership; sparse indexing/signs
+
+neumann / first_order
+ N      h         L2          Linf      p_L2   p_Linf   scaled_residual
+  8 0.125000 3.9495e-02 1.2476e-01    nan     nan 8.882e-16
+ 16 0.062500 1.7863e-02 5.8320e-02  1.145   1.097 1.153e-15
+ 32 0.031250 8.5152e-03 2.8149e-02  1.069   1.051 1.998e-15
+ 64 0.015625 4.1614e-03 1.3830e-02  1.033   1.025 3.331e-15
+
+neumann / ghost
+ N      h         L2          Linf      p_L2   p_Linf   scaled_residual
+  8 0.125000 8.8965e-04 3.3765e-03    nan     nan 9.125e-16
+ 16 0.062500 2.2056e-04 8.6106e-04  2.012   1.971 1.667e-15
+ 32 0.031250 5.4989e-05 2.1625e-04  2.004   1.993 1.775e-15
+ 64 0.015625 1.3737e-05 5.4125e-05  2.001   1.998 2.921e-15
+
+robin / first_order
+ N      h         L2          Linf      p_L2   p_Linf   scaled_residual
+  8 0.125000 2.2511e-02 7.0703e-02    nan     nan 8.882e-16
+ 16 0.062500 1.0592e-02 3.4305e-02  1.088   1.043 1.089e-15
+ 32 0.031250 5.1426e-03 1.6851e-02  1.042   1.026 2.142e-15
+ 64 0.015625 2.5356e-03 8.3550e-03  1.020   1.012 2.220e-15
+
+robin / ghost
+ N      h         L2          Linf      p_L2   p_Linf   scaled_residual
+  8 0.125000 5.2027e-04 2.0658e-03    nan     nan 1.086e-15
+ 16 0.062500 1.2733e-04 5.3073e-04  2.031   1.961 1.022e-15
+ 32 0.031250 3.1624e-05 1.3320e-04  2.009   1.994 2.138e-15
+ 64 0.015625 7.8923e-06 3.3351e-05  2.003   1.998 2.000e-15
+
+neumann/first_order L2: slope=1.05090846, max_log_deviation=8.282e-03, monotone=True, fit_N=[16, 32, 64]
+neumann/first_order Linf: slope=1.03809954, max_log_deviation=5.915e-03, monotone=True, fit_N=[16, 32, 64]
+neumann/first_order right_Linf: slope=1.03809954, max_log_deviation=5.915e-03, monotone=True, fit_N=[16, 32, 64]
+neumann/ghost L2: slope=2.00250035, max_log_deviation=6.636e-04, monotone=True, fit_N=[16, 32, 64]
+neumann/ghost Linf: slope=1.99587660, max_log_deviation=1.154e-03, monotone=True, fit_N=[16, 32, 64]
+neumann/ghost right_Linf: slope=1.99587660, max_log_deviation=1.154e-03, monotone=True, fit_N=[16, 32, 64]
+robin/first_order L2: slope=1.03128702, max_log_deviation=5.146e-03, monotone=True, fit_N=[16, 32, 64]
+robin/first_order Linf: slope=1.01884868, max_log_deviation=3.123e-03, monotone=True, fit_N=[16, 32, 64]
+robin/first_order right_Linf: slope=1.01884868, max_log_deviation=3.123e-03, monotone=True, fit_N=[16, 32, 64]
+robin/ghost L2: slope=2.00598850, max_log_deviation=1.598e-03, monotone=True, fit_N=[16, 32, 64]
+robin/ghost Linf: slope=1.99610039, max_log_deviation=7.765e-04, monotone=True, fit_N=[16, 32, 64]
+robin/ghost right_Linf: slope=1.99610039, max_log_deviation=7.765e-04, monotone=True, fit_N=[16, 32, 64]
+
+Results saved to /Users/zimingtang/Desktop/321/mth321_project2_team17/results
+
+Completed 16 cases. Tables: /Users/zimingtang/Desktop/321/mth321_project2_team17/results; figures: /Users/zimingtang/Desktop/321/mth321_project2_team17/figures

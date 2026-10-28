@@ -1,0 +1,11 @@
+test_error_norm_weights (test_mixed_boundary.MixedBoundaryTests.test_error_norm_weights) ... ok
+test_ghost_quadratic_exactness (test_mixed_boundary.MixedBoundaryTests.test_ghost_quadratic_exactness) ... ok
+test_hand_boundary_rows_and_affine_exactness (test_mixed_boundary.MixedBoundaryTests.test_hand_boundary_rows_and_affine_exactness) ... ok
+test_invalid_parameters (test_mixed_boundary.MixedBoundaryTests.test_invalid_parameters) ... ok
+test_residual_invariance_to_row_scaling (test_mixed_boundary.MixedBoundaryTests.test_residual_invariance_to_row_scaling) ... ok
+test_sparse_solve_against_dense_small_system (test_mixed_boundary.MixedBoundaryTests.test_sparse_solve_against_dense_small_system) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.006s
+
+OK

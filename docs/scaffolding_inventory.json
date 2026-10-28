@@ -1,0 +1,198 @@
+[
+  {
+    "file": "convergence_plot_template.py",
+    "sha256": "e12621cf5ce44f15aa93df3a8a107754a80a52989791c5806e65166fa911e96c",
+    "description": "Student template: convergence plots and observed-order fits (Week 6).",
+    "symbols": [
+      "fit_observed_order",
+      "plot_convergence",
+      "refinement_table",
+      "measured_refinement_study",
+      "check_solver_tolerance",
+      "main"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "domain_mask_skeleton.py",
+    "sha256": "eb48286948d8bfb3c325de475833eef92a050ec62c8c17c9fd735b6e95c65495",
+    "description": "Student template: domain masks and index maps (Weeks 5--6).",
+    "symbols": [
+      "l_shaped_mask",
+      "index_map",
+      "rhs_contribution"
+    ],
+    "not_implemented_count": 3
+  },
+  {
+    "file": "failure_cases.py",
+    "sha256": "e179c1031d1a713f9306e82a79e911ce358138f67296ccbad977d70cb3d1d1de",
+    "description": "Instructor demonstrations for Project 2; no answers are distributed.",
+    "symbols": [
+      "manufactured_u",
+      "manufactured_f",
+      "boundary_sign_probe",
+      "neumann_compatibility_probe"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "fem1d_skeleton.py",
+    "sha256": "7ffd0549b59c5122e954280476e8329e65d0ce51885c63d5147b17eafdbffd33",
+    "description": "Student scaffold: 1D P1 finite elements for -u'' = f on [0,1] (Week 6).",
+    "symbols": [
+      "mesh",
+      "element_stiffness",
+      "element_load",
+      "assemble",
+      "solve",
+      "plot_solution"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "fem2d_scikitfem_skeleton.py",
+    "sha256": "bb0af9f11d2183a99dbfd8d792e3b1dfb345437d004be10ce765bf2a91a71f2f",
+    "description": "Minimal 2D P1 FEM pathway for Project 2 (requires ``scikit-fem``).",
+    "symbols": [
+      "exact",
+      "exact_grad",
+      "stiffness",
+      "load",
+      "squared_l2_error",
+      "squared_energy_error",
+      "solve_level",
+      "main"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "fem_amg_demo.py",
+    "sha256": "f763f0b38da22ce57f9a877badf3d0e9e3d992923bd44c0b0fba85a7fc99a4a8",
+    "description": "Demo: scikit-fem assembly + PyAMG AMG-preconditioned CG (Week 6, tutorial 6).",
+    "symbols": [
+      "bilinear_laplace",
+      "linear_unit",
+      "assemble_square",
+      "cg_iterations",
+      "main",
+      "plot_solution"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "iterative_solvers_skeleton.py",
+    "sha256": "5b098e5a3356d06165c18add9876a7c5aed62691b600b96eb235eb7dcee8af03",
+    "description": "Student scaffold: iterative solvers for the five-point system (Week 6).",
+    "symbols": [
+      "residual_history",
+      "stopped_on_iterate_difference",
+      "_prepare_system",
+      "jacobi",
+      "gauss_seidel",
+      "sor",
+      "main"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "mems_skeleton.py",
+    "sha256": "598610822fcaf8db9c656b4d7f08212c388ccf219046c0522ed861618a25e919",
+    "description": "MEMS pull-in skeleton --- Project 2, open direction (Weeks 6-9).",
+    "symbols": [
+      "residual",
+      "jacobian",
+      "jacobian_audit",
+      "damped_newton",
+      "continuation",
+      "solve_at"
+    ],
+    "not_implemented_count": 3
+  },
+  {
+    "file": "mixed_boundary_fd.py",
+    "sha256": "f9e125869d0f804dadffebfae3a07179f862bfa3a8e4357fbbd2536d5b2b701b",
+    "description": "Project 2, Direction 2: mixed-boundary Poisson FDM and MMS experiments.",
+    "symbols": [
+      "ManufacturedData",
+      "exact",
+      "forcing",
+      "neumann",
+      "dirichlet",
+      "robin",
+      "DiscreteSystem",
+      "assemble_mixed_poisson",
+      "error_metrics",
+      "residual_metrics",
+      "solve_and_measure",
+      "independent_solve_check",
+      "verify_implementation",
+      "observed_order",
+      "run_study",
+      "main"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "multigrid_simple.py",
+    "sha256": "a91c23352e2bde12e627c94123b15d1a6aa19a7c86f9168520d0d617cf3576fc",
+    "description": "Demo: a minimal geometric multigrid V-cycle (Week 6, tutorial 6 micro-lecture).",
+    "symbols": [
+      "laplace_1d",
+      "restrict_full_weighting",
+      "prolong_linear",
+      "smooth",
+      "v_cycle",
+      "solve_multigrid",
+      "solve_weighted_jacobi"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "poisson_fd_setup_check.py",
+    "sha256": "181d7142edd262f24eb3c4503757884c256b33bf4ccc67c0d8a44033bdedef6a",
+    "description": "Environment sanity check for the BVP stack (NOT a coding task).",
+    "symbols": [
+      "assemble_poisson"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "poisson_fd_skeleton.py",
+    "sha256": "55757d450f2fbf089f87e3bc8fa2096d2228af9eefca215aec3e471763a766da",
+    "description": "Student scaffold: -Delta u = f on (0,1)^2 with Dirichlet data.",
+    "symbols": [
+      "manufactured_solution",
+      "forcing",
+      "assemble_poisson",
+      "solve_and_error",
+      "convergence_study",
+      "truncation_error",
+      "truncation_study",
+      "plot_solution"
+    ],
+    "not_implemented_count": 0
+  },
+  {
+    "file": "test_problem_bank.py",
+    "sha256": "65a4d603e588be801feec7beace4c7d61ac9a6a1aff99ef667047284ee504845",
+    "description": "Analytic test-problem bank for Project 2 (student-facing).",
+    "symbols": [
+      "_one",
+      "_one_plus_x",
+      "Problem",
+      "_p1",
+      "_f1",
+      "_p2",
+      "_f2",
+      "_p3",
+      "_f3",
+      "_p4",
+      "_f4",
+      "_p5",
+      "_f5",
+      "verify_bank"
+    ],
+    "not_implemented_count": 0
+  }
+]
