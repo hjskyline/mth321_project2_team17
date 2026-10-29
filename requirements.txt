@@ -1,5 +1,6 @@
-ipykernel
 numpy
 scipy
+pyamg
+ipykernel
 matplotlib
 nbstripout
