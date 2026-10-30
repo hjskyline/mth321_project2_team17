@@ -1,6 +1,7 @@
 numpy
 scipy
 pyamg
-ipykernel
 matplotlib
+tabulate
+ipykernel
 nbstripout
