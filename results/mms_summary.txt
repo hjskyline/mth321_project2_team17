@@ -10,21 +10,21 @@ Provisional fits: last 3 levels; inspect per-step rates in CSV.
 First-order rows replace the PDE; ghost rows enforce boundary PDE.
 Thus this comparison changes the formulation as well as derivative accuracy.
 
-neumann/first_order L2: slope=1.05090846, max_log_deviation=8.282e-03, monotone=True, fit_N=[16, 32, 64]
-neumann/first_order Linf: slope=1.03809954, max_log_deviation=5.915e-03, monotone=True, fit_N=[16, 32, 64]
-neumann/first_order right_Linf: slope=1.03809954, max_log_deviation=5.915e-03, monotone=True, fit_N=[16, 32, 64]
-neumann/ghost L2: slope=2.00250035, max_log_deviation=6.636e-04, monotone=True, fit_N=[16, 32, 64]
-neumann/ghost Linf: slope=1.99587660, max_log_deviation=1.154e-03, monotone=True, fit_N=[16, 32, 64]
-neumann/ghost right_Linf: slope=1.99587660, max_log_deviation=1.154e-03, monotone=True, fit_N=[16, 32, 64]
-robin/first_order L2: slope=1.03128702, max_log_deviation=5.146e-03, monotone=True, fit_N=[16, 32, 64]
-robin/first_order Linf: slope=1.01884868, max_log_deviation=3.123e-03, monotone=True, fit_N=[16, 32, 64]
-robin/first_order right_Linf: slope=1.01884868, max_log_deviation=3.123e-03, monotone=True, fit_N=[16, 32, 64]
-robin/ghost L2: slope=2.00598850, max_log_deviation=1.598e-03, monotone=True, fit_N=[16, 32, 64]
-robin/ghost Linf: slope=1.99610039, max_log_deviation=7.765e-04, monotone=True, fit_N=[16, 32, 64]
-robin/ghost right_Linf: slope=1.99610039, max_log_deviation=7.765e-04, monotone=True, fit_N=[16, 32, 64]
+neumann/first_order L2: slope=1.02453728, max_log_deviation=3.904e-03, monotone=True, fit_N=[32, 64, 128]
+neumann/first_order Linf: slope=1.01915492, max_log_deviation=2.839e-03, monotone=True, fit_N=[32, 64, 128]
+neumann/first_order right_Linf: slope=1.01915492, max_log_deviation=2.839e-03, monotone=True, fit_N=[32, 64, 128]
+neumann/ghost L2: slope=2.00066832, max_log_deviation=1.829e-04, monotone=True, fit_N=[32, 64, 128]
+neumann/ghost Linf: slope=1.99886922, max_log_deviation=2.293e-04, monotone=True, fit_N=[32, 64, 128]
+neumann/ghost right_Linf: slope=1.99886922, max_log_deviation=2.293e-04, monotone=True, fit_N=[32, 64, 128]
+robin/first_order L2: slope=1.01494869, max_log_deviation=2.404e-03, monotone=True, fit_N=[32, 64, 128]
+robin/first_order Linf: slope=1.00929846, max_log_deviation=1.290e-03, monotone=True, fit_N=[32, 64, 128]
+robin/first_order right_Linf: slope=1.00929846, max_log_deviation=1.290e-03, monotone=True, fit_N=[32, 64, 128]
+robin/ghost L2: slope=2.00158803, max_log_deviation=4.351e-04, monotone=True, fit_N=[32, 64, 128]
+robin/ghost Linf: slope=1.99871019, max_log_deviation=4.294e-04, monotone=True, fit_N=[32, 64, 128]
+robin/ghost right_Linf: slope=1.99871019, max_log_deviation=4.294e-04, monotone=True, fit_N=[32, 64, 128]
 
 Independent algebraic checks:
-neumann/first_order, N=64: {'independent_solver': 'BiCGSTAB on row-scaled system', 'rtol': 1e-12, 'iterations': 236, 'L2_difference_over_MMS_error': 1.1065497164201851e-08, 'Linf_difference_over_MMS_error': 8.714653297072971e-09, 'backward_error': 8.090707734957837e-14}
-neumann/ghost, N=64: {'independent_solver': 'BiCGSTAB on row-scaled system', 'rtol': 1e-12, 'iterations': 233, 'L2_difference_over_MMS_error': 2.343041604362693e-06, 'Linf_difference_over_MMS_error': 1.1948540932299233e-06, 'backward_error': 3.559916211536064e-14}
-robin/first_order, N=64: {'independent_solver': 'BiCGSTAB on row-scaled system', 'rtol': 1e-12, 'iterations': 216, 'L2_difference_over_MMS_error': 2.275248320630417e-08, 'Linf_difference_over_MMS_error': 1.4265583894034332e-08, 'backward_error': 9.339399700631758e-14}
-robin/ghost, N=64: {'independent_solver': 'BiCGSTAB on row-scaled system', 'rtol': 1e-12, 'iterations': 217, 'L2_difference_over_MMS_error': 7.615484711993321e-06, 'Linf_difference_over_MMS_error': 4.304080824596505e-06, 'backward_error': 8.564514351370925e-14}
+neumann/first_order, N=128: {'independent_solver': 'BiCGSTAB on row-scaled system', 'rtol': 1e-12, 'iterations': 449, 'L2_difference_over_MMS_error': 1.108080620193487e-07, 'Linf_difference_over_MMS_error': 7.043516525636123e-08, 'backward_error': 5.952209345709008e-14}
+neumann/ghost, N=128: {'independent_solver': 'BiCGSTAB on row-scaled system', 'rtol': 1e-12, 'iterations': 480, 'L2_difference_over_MMS_error': 1.599810899561732e-05, 'Linf_difference_over_MMS_error': 8.140980477806253e-06, 'backward_error': 1.2534708134846584e-13}
+robin/first_order, N=128: {'independent_solver': 'BiCGSTAB on row-scaled system', 'rtol': 1e-12, 'iterations': 434, 'L2_difference_over_MMS_error': 1.3284575989102016e-07, 'Linf_difference_over_MMS_error': 1.0115577927832599e-07, 'backward_error': 5.214511015561077e-14}
+robin/ghost, N=128: {'independent_solver': 'BiCGSTAB on row-scaled system', 'rtol': 1e-12, 'iterations': 425, 'L2_difference_over_MMS_error': 5.801989457453547e-05, 'Linf_difference_over_MMS_error': 3.1402750859249304e-05, 'backward_error': 6.521023751158915e-14}

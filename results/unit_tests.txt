@@ -1,3 +1,10 @@
+test_bad_boundary_sign_is_detected_despite_small_algebraic_residual (test_experiments.ExtendedVerification.test_bad_boundary_sign_is_detected_despite_small_algebraic_residual) ... ok
+test_flag_false_does_not_replace_ghost_row (test_experiments.ExtendedVerification.test_flag_false_does_not_replace_ghost_row) ... ok
+test_gmres_and_amg_on_both_nonsymmetric_formulations (test_experiments.ExtendedVerification.test_gmres_and_amg_on_both_nonsymmetric_formulations) ... ok
+test_independent_kron_assembly_and_nonzero_boundary_rhs (test_experiments.ExtendedVerification.test_independent_kron_assembly_and_nonzero_boundary_rhs) ... ok
+test_iteration_cap_is_exposed_not_reported_as_success (test_experiments.ExtendedVerification.test_iteration_cap_is_exposed_not_reported_as_success) ... ok
+test_observed_order_accepts_a_mesh_list (test_experiments.ExtendedVerification.test_observed_order_accepts_a_mesh_list) ... ok
+test_two_norms_do_not_include_prescribed_dirichlet_values (test_experiments.ExtendedVerification.test_two_norms_do_not_include_prescribed_dirichlet_values) ... ok
 test_error_norm_weights (test_mixed_boundary.MixedBoundaryTests.test_error_norm_weights) ... ok
 test_ghost_quadratic_exactness (test_mixed_boundary.MixedBoundaryTests.test_ghost_quadratic_exactness) ... ok
 test_hand_boundary_rows_and_affine_exactness (test_mixed_boundary.MixedBoundaryTests.test_hand_boundary_rows_and_affine_exactness) ... ok
@@ -6,6 +13,6 @@ test_residual_invariance_to_row_scaling (test_mixed_boundary.MixedBoundaryTests.
 test_sparse_solve_against_dense_small_system (test_mixed_boundary.MixedBoundaryTests.test_sparse_solve_against_dense_small_system) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.006s
+Ran 13 tests in 0.028s
 
 OK

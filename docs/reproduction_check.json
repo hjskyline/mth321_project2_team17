@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-04",
+  "procedure": "Full run_all.py in a fresh output directory with the same default parameters and five timing repeats",
+  "code_hashes_equal": true,
+  "numeric_csvs_and_summary_byte_identical": [
+    "mms_convergence.csv",
+    "convergence_fits.csv",
+    "truncation_diagnostics.csv",
+    "error_geometry.csv",
+    "assembly_crosscheck.csv",
+    "hand_rows.csv",
+    "matrix_checks.csv",
+    "mms_summary.txt"
+  ],
+  "not_required_to_match": "Wall-clock timings, timestamp metadata, and elapsed unittest time",
+  "limitation": "Agent-run independent process on the same machine; not a fabricated teammate sign-off"
+}

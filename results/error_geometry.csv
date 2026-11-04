@@ -1,0 +1,5 @@
+bc_type,closure,N,minimum_signed_error,maximum_signed_error,x_neighbor_sign_changes,y_neighbor_sign_changes
+neumann,first_order,128,3.7640710082165185e-07,0.00685289169454073,0,0
+neumann,ghost,128,-1.3537089127879653e-05,5.046764992577835e-07,127,35
+robin,first_order,128,2.2916757624891204e-07,0.004158720401986393,0,0
+robin,ghost,128,-8.339717318506246e-06,8.818515278008476e-07,127,24

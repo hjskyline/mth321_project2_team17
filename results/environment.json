@@ -1,20 +1,44 @@
 {
+  "recorded_at_utc": "2026-11-04T10:08:50.751294+00:00",
   "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
   "platform": "macOS-27.0.1-arm64-arm-64bit",
-  "numpy": "2.5.4",
-  "scipy": "1.18.1",
-  "matplotlib": "3.11.2",
+  "processor": "arm",
   "meshes": [
-    8,
     16,
     32,
-    64
+    64,
+    128
   ],
-  "beta": 2.0,
   "fit_last": 3,
-  "unknown_count": "N*(N-1); N is intervals per coordinate",
-  "linear_solver": "scipy.sparse.linalg.spsolve (direct, no tolerance parameter)",
-  "independent_check": "row-scaled BiCGSTAB rtol=1e-12 on each finest system",
-  "timing_scope": "No performance comparison is made by this baseline.",
-  "claim_scope": "Smooth MMS benchmark; not proof for general mixed-boundary data."
+  "timing_repeats": 5,
+  "baseline_only": false,
+  "blas_thread_limit": 1,
+  "threadpools": [],
+  "checkout_HEAD_at_run": "8d0e79419303ad206b2b1d4de2023a095f3555f5",
+  "source_identity_note": "code hashes identify working files; HEAD may be the parent before commit",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "pyamg": "5.4.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "code_sha256": {
+    "code/experiment_suite.py": "6ae920d2105acae04efc918ab2d4002baa076573ad1498de31a634cf79debe10",
+    "code/kron_reference.py": "790b0bd6d27ac0341c2ddfbaed94df162d8dfa844cde6df90f9f108ae152b937",
+    "code/linear_solvers.py": "8be7c5088e28af49e87b3ad92a82f1cec643923eb3bb0556885597ac336c44d5",
+    "code/mixed_boundary_fd.py": "a74c4ee4cd2272ca5d2591c643392d357a5628b6da265b8f03768fbf2a4831eb",
+    "code/reference_hua_ghost.py": "ab0946abe00953ede9ee46ddddd2f119a26d5a263685bb1686c0ced88f36c928",
+    "code/run_all.py": "496da27f0bf2939a2fdc02cc318b60468d46397b865e606e12c853dd83c892bd",
+    "code/test_experiments.py": "ad9ed760fd149e5946189f782de1841cec0db7bc7d78c14dc60ceb7275bdf02a",
+    "code/test_mixed_boundary.py": "fd9fa2251d8d7b0842d709856fd32fdaf3f35cbde4d3e7f6a7f03f0779178d42"
+  },
+  "cost_includes": "assembly + diagonal scaling + conversion + factorization/AMG setup + solve",
+  "cost_excludes": "imports, warmups, reference solutions, calibration, validation, plotting, I/O",
+  "algebraic_acceptance": "both solution differences / LU-based MMS errors <= 1e-3",
+  "accuracy_targets_Linf": [
+    0.01,
+    0.001
+  ],
+  "claim_scope": "smooth MMS; no real-world calibration or proof of AMG asymptotic complexity"
 }

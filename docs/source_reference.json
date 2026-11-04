@@ -1,0 +1,16 @@
+{
+  "repository": "hjskyline/mth321_project2_team17",
+  "branch": "hua-nb",
+  "commit": "b3466958df84f0faa7d6f9ed79588a77558f05aa",
+  "path": "luhua.ipynb",
+  "notebook_cells_one_based": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "reuse": "selected definitions copied verbatim with a provenance header and safe imports",
+  "adapter": "kron_reference.py adds a separate first_order adapter; source functions unchanged",
+  "not_executed": "plotting, metrics, batch solves and pure-Neumann helper from the notebook",
+  "scope": "independent implementation check of common mathematics, not independent mathematical modelling"
+}

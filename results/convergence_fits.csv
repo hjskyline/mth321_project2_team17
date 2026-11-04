@@ -1,0 +1,25 @@
+bc_type,closure,norm,fit_N,slope,max_log_deviation,monotone,rates_stable,note
+neumann,first_order,L2,"[32, 64, 128]",1.0245372809740494,0.0039038019645518673,True,True,diagnostic window; algebraic gate checked separately
+neumann,first_order,Linf,"[32, 64, 128]",1.0191549237926418,0.0028394268700768777,True,True,diagnostic window; algebraic gate checked separately
+neumann,first_order,interior_L2,"[32, 64, 128]",0.9951128323417125,0.0008446873015817147,True,True,diagnostic window; algebraic gate checked separately
+neumann,first_order,interior_Linf,"[32, 64, 128]",0.970928683826661,0.004481283971576211,True,True,diagnostic window; algebraic gate checked separately
+neumann,first_order,right_L2,"[32, 64, 128]",1.0234309819720446,0.0035520746581871876,True,True,diagnostic window; algebraic gate checked separately
+neumann,first_order,right_Linf,"[32, 64, 128]",1.0191549237926418,0.0028394268700768777,True,True,diagnostic window; algebraic gate checked separately
+neumann,ghost,L2,"[32, 64, 128]",2.000668318576792,0.00018293118553458498,True,True,diagnostic window; algebraic gate checked separately
+neumann,ghost,Linf,"[32, 64, 128]",1.9988692218480995,0.00022931383676727535,True,True,diagnostic window; algebraic gate checked separately
+neumann,ghost,interior_L2,"[32, 64, 128]",1.957801058362365,0.006848063776283553,True,True,diagnostic window; algebraic gate checked separately
+neumann,ghost,interior_Linf,"[32, 64, 128]",1.9326346306463118,0.010738160082803816,True,True,diagnostic window; algebraic gate checked separately
+neumann,ghost,right_L2,"[32, 64, 128]",1.9980269576698588,0.000539135573658811,True,True,diagnostic window; algebraic gate checked separately
+neumann,ghost,right_Linf,"[32, 64, 128]",1.9988692218480995,0.00022931383676727535,True,True,diagnostic window; algebraic gate checked separately
+robin,first_order,L2,"[32, 64, 128]",1.0149486912207808,0.0024042324345865396,True,True,diagnostic window; algebraic gate checked separately
+robin,first_order,Linf,"[32, 64, 128]",1.009298456743119,0.001289778552657772,True,True,diagnostic window; algebraic gate checked separately
+robin,first_order,interior_L2,"[32, 64, 128]",0.9850263557465806,0.002429210814477223,True,True,diagnostic window; algebraic gate checked separately
+robin,first_order,interior_Linf,"[32, 64, 128]",0.959688998100231,0.006285872675313442,True,True,diagnostic window; algebraic gate checked separately
+robin,first_order,right_L2,"[32, 64, 128]",1.013983181645845,0.0020387482997303863,True,True,diagnostic window; algebraic gate checked separately
+robin,first_order,right_Linf,"[32, 64, 128]",1.009298456743119,0.001289778552657772,True,True,diagnostic window; algebraic gate checked separately
+robin,ghost,L2,"[32, 64, 128]",2.0015880334034226,0.00043505024470036346,True,True,diagnostic window; algebraic gate checked separately
+robin,ghost,Linf,"[32, 64, 128]",1.9987101884009724,0.00042944642062536786,True,True,diagnostic window; algebraic gate checked separately
+robin,ghost,interior_L2,"[32, 64, 128]",1.9506649901013438,0.007988505416980374,True,True,diagnostic window; algebraic gate checked separately
+robin,ghost,interior_Linf,"[32, 64, 128]",1.9184164106422692,0.012951081402604814,True,True,diagnostic window; algebraic gate checked separately
+robin,ghost,right_L2,"[32, 64, 128]",1.9978613723396073,0.0005763964591629644,True,True,diagnostic window; algebraic gate checked separately
+robin,ghost,right_Linf,"[32, 64, 128]",1.9987101884009724,0.00042944642062536786,True,True,diagnostic window; algebraic gate checked separately

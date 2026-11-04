@@ -138,9 +138,9 @@ Analytical/pack-based predictions (not fitted output):
    approach order 1; ghost global L2/Linf should approach order 2.
 4. Matrix diagonal entries are positive, off-diagonal entries nonpositive,
    and the matrix is generally nonsymmetric.
-5. Initial meshes are `N=8,16,32,64`. Fits on the last three levels are diagnostic;
+5. Initial baseline meshes were `N=8,16,32,64`; the expanded default is `N=16,32,64,128`. Fits on the last three levels are diagnostic;
    check per-step orders and fit deviations before selecting a report window.
 
 Runtime outputs are in results/ and figures/. Do not overwrite these predictions
-to match observations. This foundation does not yet include pure Neumann data,
-real heat-transfer calibration, a solver-performance ranking, or a convergence proof.
+to match observations. The expanded suite includes matched-accuracy performance experiments and a problem-specific
+analysis draft in theory.md. Pure Neumann data and real heat-transfer calibration remain outside scope.

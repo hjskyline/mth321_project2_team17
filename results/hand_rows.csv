@@ -1,0 +1,21 @@
+bc_type,closure,N,i,j,kind,row,columns,coefficients,rhs
+neumann,first_order,4,1,1,Dirichlet-adjacent,0,"[0, 1, 3]","[64.0, -16.0, -16.0]",37.79137079260747
+neumann,first_order,4,2,2,interior,4,"[1, 3, 4, 5, 7]","[-16.0, -16.0, 64.0, -16.0, -16.0]",-5.43656365691809
+neumann,first_order,4,4,1,right-bottom-adjacent,9,"[6, 9]","[-4.0, 4.0]",3.4903429574618414
+neumann,first_order,4,4,2,right-middle,10,"[7, 10]","[-4.0, 4.0]",4.4816890703380645
+neumann,first_order,4,4,3,right-top-adjacent,11,"[8, 11]","[-4.0, 4.0]",5.754602676005731
+neumann,ghost,4,1,1,Dirichlet-adjacent,0,"[0, 1, 3]","[64.0, -16.0, -16.0]",37.79137079260747
+neumann,ghost,4,2,2,interior,4,"[1, 3, 4, 5, 7]","[-16.0, -16.0, 64.0, -16.0, -16.0]",-5.43656365691809
+neumann,ghost,4,4,1,right-bottom-adjacent,9,"[6, 9, 10]","[-32.0, 64.0, -16.0]",64.43456700011578
+neumann,ghost,4,4,2,right-middle,10,"[7, 9, 10, 11]","[-32.0, -16.0, 64.0, -16.0]",26.89013442202839
+neumann,ghost,4,4,3,right-top-adjacent,11,"[8, 10, 11]","[-32.0, -16.0, 64.0]",152.7525136389248
+robin,first_order,4,1,1,Dirichlet-adjacent,0,"[0, 1, 3]","[64.0, -16.0, -16.0]",37.79137079260747
+robin,first_order,4,2,2,interior,4,"[1, 3, 4, 5, 7]","[-16.0, -16.0, 64.0, -16.0, -16.0]",-5.43656365691809
+robin,first_order,4,4,1,right-bottom-adjacent,9,"[6, 9]","[-4.0, 6.0]",10.471028872385524
+robin,first_order,4,4,2,right-middle,10,"[7, 10]","[-4.0, 6.0]",13.445067211014194
+robin,first_order,4,4,3,right-top-adjacent,11,"[8, 11]","[-4.0, 6.0]",17.26380802801719
+robin,ghost,4,1,1,Dirichlet-adjacent,0,"[0, 1, 3]","[64.0, -16.0, -16.0]",37.79137079260747
+robin,ghost,4,2,2,interior,4,"[1, 3, 4, 5, 7]","[-16.0, -16.0, 64.0, -16.0, -16.0]",-5.43656365691809
+robin,ghost,4,4,1,right-bottom-adjacent,9,"[6, 9, 10]","[-32.0, 80.0, -16.0]",120.28005431950524
+robin,ghost,4,4,2,right-middle,10,"[7, 9, 10, 11]","[-32.0, -16.0, 80.0, -16.0]",98.59715954743743
+robin,ghost,4,4,3,right-top-adjacent,11,"[8, 10, 11]","[-32.0, -16.0, 80.0]",244.82615645501647

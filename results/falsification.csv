@@ -1,0 +1,14 @@
+variant,N,h,Linf,error_over_correct,small_residual_of_own_equation,detected,method,rtol,restart,max_restart_cycles,info,converged,iterations,preprocessing_s,setup_s,solve_s,solver_total_s,scaled_relative_residual_2,factor_nnz,hierarchy_A_nnz,hierarchy_transfer_nnz,operator_complexity,levels,callback_norm,L2_difference,Linf_difference,L2_difference_over_MMS,Linf_difference_over_MMS,qoi_right_midpoint,qoi_difference,algebraic_gate
+correct,16,0.0625,0.0008610566341946679,1.0,1.6670692604137116e-15,False,,,,,,,,,,,,,,,,,,,,,,,,,
+correct,32,0.03125,0.00021625416204251735,1.0,1.775489477662262e-15,False,,,,,,,,,,,,,,,,,,,,,,,,,
+correct,64,0.015625,5.412454595088434e-05,1.0,2.9213827537621917e-15,False,,,,,,,,,,,,,,,,,,,,,,,,,
+wrong_normal_sign,16,0.0625,3.4583248952498122,4016.3733230907933,1.3808398868775384e-15,True,,,,,,,,,,,,,,,,,,,,,,,,,
+wrong_normal_sign,32,0.03125,3.4716086918998226,16053.372841986162,2.886579864025407e-15,True,,,,,,,,,,,,,,,,,,,,,,,,,
+wrong_normal_sign,64,0.015625,3.4759766422234963,64221.81620475474,2.4424906541753444e-15,True,,,,,,,,,,,,,,,,,,,,,,,,,
+missing_inward_factor,16,0.0625,4.38021614548216,5087.024443611545,1.1102230246251565e-15,True,,,,,,,,,,,,,,,,,,,,,,,,,
+missing_inward_factor,32,0.03125,5.250227724999073,24278.042445106028,2.220446049250313e-15,True,,,,,,,,,,,,,,,,,,,,,,,,,
+missing_inward_factor,64,0.015625,5.874943226971343,108544.89628980162,2.8996987103124816e-15,True,,,,,,,,,,,,,,,,,,,,,,,,,
+omit_boundary_forcing,16,0.0625,0.10718468832254402,124.48041634658804,1.2351231148954867e-15,True,,,,,,,,,,,,,,,,,,,,,,,,,
+omit_boundary_forcing,32,0.03125,0.054025106167874704,249.82227235586302,2.220446049250313e-15,True,,,,,,,,,,,,,,,,,,,,,,,,,
+omit_boundary_forcing,64,0.015625,0.027101592664307006,500.72646685850293,2.7229737561973444e-15,True,,,,,,,,,,,,,,,,,,,,,,,,,
+loose_tolerance,64,0.015625,4.0113476565493285,,,True,gmres,0.01,80,100,0,True,41,0.00016104202950373292,1.2497184798121452e-07,0.005659832968376577,0.005820999969728291,0.009846791102276528,0,0,0,0.0,0,scipy pr_norm: relative preconditioned residual 2-norm,1.9755244232044398,4.011294230232455,143809.15329980425,74112.29341069261,0.6289326755240017,3.852704652873948,False

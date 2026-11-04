@@ -115,7 +115,7 @@ def assemble_mixed_poisson(N, bc_type="neumann", closure="ghost", beta=2.0,
         return (i - 1) * (N - 1) + j - 1
 
     def add(k, i, j, coefficient):
-        # Top/bottom own the corners, even if i=N.
+        # 上下 Dirichlet 边拥有四角；右边导数条件绝不能覆盖这些已知点。
         if i == 0 or j == 0 or j == N:
             b[k] -= coefficient * data.exact(i * h, j * h)
         else:
@@ -303,7 +303,10 @@ def verify_implementation():
 
 
 def observed_order(hs, errors):
-    errors = np.asarray(errors)
+    hs = np.asarray(hs, dtype=float)
+    errors = np.asarray(errors, dtype=float)
+    if hs.ndim != 1 or errors.shape != hs.shape or np.any(hs <= 0):
+        raise ValueError("need matching one-dimensional positive mesh sizes and errors")
     if np.any(errors <= 0) or not np.all(np.isfinite(errors)):
         raise ValueError("need positive finite errors for fitting")
     rates = np.full(len(hs), np.nan)
@@ -331,7 +334,7 @@ def run_study(meshes, outdir, fit_last=3, figure_dir=None):
             system, uh, row = solve_and_measure(N, bc, closure)
             rows.append(row)
         hs = np.array([r["h"] for r in rows])
-        for key in ("L2", "Linf", "right_Linf", "interior_Linf"):
+        for key in ("L2", "Linf", "right_L2", "right_Linf", "interior_L2", "interior_Linf"):
             rates = observed_order(hs, [r[key] for r in rows])
             for row, rate in zip(rows, rates):
                 row[f"p_{key}"] = rate
@@ -407,7 +410,7 @@ def run_study(meshes, outdir, fit_last=3, figure_dir=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--meshes", nargs="+", type=int, default=[8, 16, 32, 64])
+    parser.add_argument("--meshes", nargs="+", type=int, default=[16, 32, 64, 128])
     parser.add_argument("--fit-last", type=int, default=3)
     parser.add_argument("--outdir", type=Path,
                         default=Path(__file__).resolve().parents[1] / "results")
